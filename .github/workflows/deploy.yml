@@ -15,11 +15,11 @@ jobs:
         with:
           caching: 'false'
       - name: Output information
-        run: echo "Cache used? ${{ steps.cache-deps.outputs.used-cache }}"    
+        run: echo "Cache used ${{ steps.cache-deps.outputs.used-cache }}"    
       - name: Lint code
         run: npm run lint
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestg
     steps:
       - name: Get code
         uses: actions/checkout@v3
